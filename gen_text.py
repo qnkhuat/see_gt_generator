@@ -5,6 +5,7 @@ import numpy as np
 import random
 import csv
 import argparse
+import sys
 font = ImageFont.truetype('font/arial.ttf',30)
 
 parser= argparse.ArgumentParser()
@@ -14,9 +15,11 @@ parser.add_argument('type')
 args=parser.parse_args()
 gt_name ='csv/'+ args.type+'.csv'
 if args.type == 'train':
-    iters =1
-else:
+    iters =10000
+elif args.type=='tests':
     iters=100
+else:
+    sys.exit('wrong type')
 
 #get data dirs
 cwd= os.getcwd()
@@ -45,7 +48,7 @@ for i in range(iters):
             continue
 
         #randomly text a
-        n=random.randint(0,len(texts))
+        n=random.randint(0,len(texts)-1)
         text=texts[n]
 
         im=im.resize((330,50))
