@@ -13,6 +13,10 @@ parser.add_argument('type')
 
 args=parser.parse_args()
 gt_name = args.type+'.csv'
+if args.type == 'train':
+    iters =1
+else:
+    iters=100
 
 #get data dirs
 cwd= os.getcwd()
@@ -22,7 +26,6 @@ output_dir=cwd + '/results/'
 images=os.listdir(input_dir)
 
 #number of iters
-iters=1000
 
 
 with open('vin_list.txt','r') as f:
@@ -45,7 +48,7 @@ for i in range(iters):
         n=random.randint(0,len(texts))
         text=texts[n]
 
-        im=im.resize((230,50))
+        im=im.resize((330,50))
         drawer = ImageDraw.Draw(im)
         drawer.text((5,5),text,(255,255,255),font=font)
 
