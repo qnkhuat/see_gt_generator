@@ -9,7 +9,7 @@ font = ImageFont.truetype('font/arial.ttf',30)
 
 parser= argparse.ArgumentParser()
 
-parser.add_agrument('type')
+parser.add_argument('type')
 
 args=parser.parse_args()
 gt_name = args.type+'.csv'
