@@ -57,6 +57,6 @@ for i in range(iters):
         im.save(outfile)
         print(outfile)
 
-        with open('gt_path.csv','a') as f:
+        with open(gt_name,'a') as f:
             writer=csv.writer(f,delimiter='\t')
             writer.writerow([outfile,text])
