@@ -50,7 +50,7 @@ for i in range(iters):
         drawer.text((5,5),text,(255,255,255),font=font)
 
         name = imageFile.split('.')
-        outfile = output_dir + name[0] +str(i)+'.' + name[1]
+        outfile = output_dir + name[0] + '_' +str(i)+'.' + name[1]
         im.save(outfile)
         print(outfile)
 
