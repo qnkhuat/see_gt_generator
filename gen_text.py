@@ -4,8 +4,15 @@ import os
 import numpy as np
 import random
 import csv
+import argparse
 font = ImageFont.truetype('/Library/Fonts/Arial.ttf',30)
 
+parser= argparse.ArgumentParser()
+
+parser.add_agrument('type')
+
+args=parser.parse_args()
+gt_name = args.type+'.csv'
 
 #get data dirs
 cwd= os.getcwd()
@@ -22,7 +29,7 @@ with open('vin_list.txt','r') as f:
     texts=f.read()
     texts=texts.split('\n')
 
-with open('gt_path.csv', 'w') as f:
+with open(gt_name, 'w') as f:
     writer = csv.writer(f, delimiter='\t')
     writer.writerow([17, 1])
 
