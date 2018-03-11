@@ -12,7 +12,7 @@ parser= argparse.ArgumentParser()
 parser.add_argument('type')
 
 args=parser.parse_args()
-gt_name = args.type+'.csv'
+gt_name ='csv/'+ args.type+'.csv'
 if args.type == 'train':
     iters =1
 else:
