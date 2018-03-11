@@ -24,7 +24,7 @@ else:
 #get data dirs
 cwd= os.getcwd()
 input_dir= cwd + '/background/'
-output_dir=cwd + '/results/'
+output_dir=cwd + '/results/'+args.type+ '/'
 
 images=os.listdir(input_dir)
 
