@@ -16,7 +16,7 @@ args=parser.parse_args()
 gt_name ='csv/'+ args.type+'.csv'
 if args.type == 'train':
     iters =10000
-elif args.type=='tests':
+elif args.type=='test':
     iters=100
 else:
     sys.exit('wrong type')
