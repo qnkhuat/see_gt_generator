@@ -5,7 +5,7 @@ import numpy as np
 import random
 import csv
 import argparse
-font = ImageFont.truetype('/Library/Fonts/Arial.ttf',30)
+font = ImageFont.truetype('font/arial.ttf',30)
 
 parser= argparse.ArgumentParser()
 
